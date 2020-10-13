@@ -29,6 +29,4 @@ theme:
 
 markdown_extensions:
     - attr_list
-    - codehilite:
-        use_pygments: true
     - admonition
