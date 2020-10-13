@@ -48,7 +48,7 @@ There are lots of keyboard shortcuts that can be altered in the Preferences tab.
 * **Tab:** When you start typing in a function name, pressing tab will help complete it or give you a list of possible functions
 * **CTRL + R:** Comment out an entire line
 * **CTRL + T:** Uncomment a line
-* **CTRL + I:** Smart indent. This is useful for helping to keep your code tidy. This wil lbe particularly useful when we look at control statements
+* **CTRL + I:** Smart indent. This is useful for helping to keep your code tidy. This will be particularly useful when we look at control statements
 * **CTRL + C:** If pressed when the command window is active, it will break the current code and return control to you. This is invaluable when you want to stop a very long process (e.g. if you realize you made an error!).
 * **F9:** Run the highlighted line of code
 * **F5:** Run the entire script
@@ -65,7 +65,7 @@ In this example, the function *mean* has been called, and MATLAB tries to help b
 ```matlab
 help mean
 ```
-This command will print the help file associated with the function mean. The MATLAB website also contains fairly useful documentation. When you run into situations you cannot solve, searching for your problem will often find you an answer. The MATLAB Central help forum is a good place to look for solutions to problems, as is StackExchange.
+This command will print the help file associated with the function mean. The MATLAB website also contains fairly useful documentation. When you run into situations you cannot solve, searching for your problem will often find you an answer. The [MATLAB Answers](https://www.mathworks.com/matlabcentral/answers/index/?s_tid=gn_mlc_an) help forum is a good place to look for solutions to problems.
 
 ## Code analyzer
 
