@@ -4,7 +4,7 @@
 
 When you open MATLAB, you will see something similar the image below:
 
-![matlab_mainwindow](/img/matlab_main_window.png)
+![matlab_mainwindow](../img/matlab_main_window.png)
 
 This is the MATLAB graphical user interface, or GUI. All of the programming and running of code we will do will happen in this GUI. 
 
@@ -58,7 +58,7 @@ There are lots of keyboard shortcuts that can be altered in the Preferences tab.
 
 Even the most seasoned MATLABer will spend considerable time accessing the help documentation. There are multiple ways to get help when using MATLAB. When calling a function, MATLAB will automatically provide hints about the input arguments it expects:
 
-![matlab_function_hint](/img/matlab_function_hint.png)
+![matlab_function_hint](../img/matlab_function_hint.png)
 
 In this example, the function *mean* has been called, and MATLAB tries to help by reminding you about which arguments you need. Often you are going to need more information to understand what a function does and what the various inputs and outputs are. The *help* function will print any other function's help to the command window:
 
@@ -71,13 +71,13 @@ This command will print the help file associated with the function mean. The MAT
 
 This is a built-in program that analyzes the code in the Editor window and looks for problems. A warning is given when the code analyzer detects code that will work but could be problematic in some circumstances. The part of the code giving the warning is highlighted by an orange squiggly line, and holding the cursor over the warning will give information about why MATLAB has thrown a warning:
 
-![matlab_function_hint](/img/matlab_warning_hint.png){: style="height:300px"}
+![matlab_function_hint](../img/matlab_warning_hint.png){: style="height:300px"}
 
 You do not necessarily need to fix all of the warnings, as the code will still run. However it is good practice to inspect each warning, consider why it is warning you, and if it needes to remedied.
 
 An error is given when it finds a line that MATLAB will crash on. Before running a script, you will need to fix any errors that the code analyzer finds. A script will never run while there are errors present. An error is highlighted with a red squiggly line. Like with warnings, holding the cursor over the error will give you some information:
 
-![matlab_function_hint](/img/matlab_error_hint.png){: style="height:300px"}
+![matlab_function_hint](../img/matlab_error_hint.png){: style="height:300px"}
 
 Although useful, do not rely solely on the code analyzer. It will not pick up all errors. It will also not save you from the worst errors of all, which are times when the code does not crash, but gives you the wrong outcome!
 
@@ -100,11 +100,11 @@ MATLAB is always ‘in’ a directory. The current folder displays the directory
 
 The concept of the MATLAB path is a very important one, as it relates to where MATLAB looks for code. To understand how this works, consider the example below. We have written a small script (what it does does not matter much right now), and saved it in the working directory, and called it showmean:
 
-![matlab_path_1](/img/matlab_path_1.png)
+![matlab_path_1](../img/matlab_path_1.png)
 
 If we type showmean into the Command Window, we get an output:
 
-![matlab_path_1](/img/matlab_path_2.png){: style="height:80px"}
+![matlab_path_1](../img/matlab_path_2.png){: style="height:80px"}
 
 Now we are going to create a new folder in the working directory called tmp, and move the showmean script into that new folder. That MATLAB code for that is:
 
@@ -118,7 +118,7 @@ movefile('movefile.m', 'tmp/movefile.m')
 
 After moving the file, we try to run showmean again. This time we get an error:
 
-![matlab_path_1](/img/matlab_path_3.png)
+![matlab_path_1](../img/matlab_path_3.png)
 
 Why doeds this happen? It is because MATLAB cannot see all the files on your computer. It only knows about files that are on the MATLAB path. The current directory is always on the path. We can add and remove other locations as needed. In the GUI, you can adjust the MATLAB path by clicking on the Home tav, then clicking Set Path. We can also do this with the *addpath* and *rmpath* functions:
 
@@ -134,6 +134,6 @@ rmpath('path to remove')
 
 Let's use addpath to add the tmp folder to the path, and try running showmean again:
 
-![matlab_path_1](/img/matlab_path_4.png){: style="height:80px"}
+![matlab_path_1](../img/matlab_path_4.png){: style="height:80px"}
 
 Success! showmean ran because MATLAB now knows to look in the tmp folder. Whenever you start an analysis, it is important you know which directories are on the MATLAB path. It is common to use *addpath* at the top of a script to add the relevant directories needed for an analysis. Having too many directories permanently on the path can cause MATLAB to run slow. I keep frequently used toolboxes on the path permanently using a startup file.
