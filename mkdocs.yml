@@ -24,8 +24,9 @@ pages:
 theme:
   name: material
   palette: 
-    primary: deep orange
-    accent: deep purple
+    - scheme: slate
+      primary: deep orange
+      accent: purple
 
 markdown_extensions:
     - attr_list
