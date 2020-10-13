@@ -163,7 +163,7 @@ Much better! And by giving the function a helpful name and comment, it should be
 
 So let's try writing our own function. A common statistic we use in data analysis is the standard error. Unfortunately however MATLAB does not provide an in-built function to calculate standard error. So let's do it ourselves. First, here is the equation for calculating standard error:
 
-![se](/img/se_equation.png){: align=centre style="height:200px" }
+![se](../img/se_equation.png){: align=centre style="height:200px" }
 
 We want to write a MATLAB function to perform that equation on a variable:
 
