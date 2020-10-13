@@ -38,7 +38,7 @@ There are several MATLAB file types that you should be aware of:
 1. **.m:** These are MATLAB script files that contain code
 2. **.mat:** These are MATLAB-readable datafiles that can be interacted with using the *save* and *load* commands. Of course these are not the only files MATLAB can read. We will talk more about importing/exporting different file types later one
 3. **.fig:** These are MATLAB-readable figures. 
-4. **.mex:** You will probably not interact much with MEX files. Essentially there are compiled code used to make things run faster.
+4. **.mex:** You will probably not interact much with MEX files. These are compiled code used to make things run faster.
 
 ## Keyboard shortcuts
 
