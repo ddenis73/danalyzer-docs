@@ -7,7 +7,7 @@ site_url: 'https://github.com/ddenis73/danalyzer-docs/'
 
 pages:
   - Home: 'index.md'
-  - Tutorial:
+  - Tutorials:
     - MATLAB: 
       - Overview: 'matlab-tutorial.md'
       - MATLAB environment: 'matlab-environment.md'
