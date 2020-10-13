@@ -14,7 +14,7 @@ myFirstVar = 7;
 
 Now that you have created a variable, it appears in the Workspace. It tells you the name of the variable, as well as giving you some information about its content:
 
-![workspace_example](/img/workspace_one_file.png){: style="height:100px"}
+![workspace_example](../img/workspace_one_file.png){: style="height:100px"}
 
 To get more information about a variable we can use the function *whos*:
 
