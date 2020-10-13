@@ -19,7 +19,7 @@ data = randn(25, 1);
 
 ```
 
-Let us consider this line of code. The function name is *randn*. Then, inside the parentheses we provide our input arguments here. We are providing the function with two input arguments, with each input separated by a comma. In this case, the function will return a matrix with 25 rows and one column. By using the = sign, we are assigning that output to the variable named data. 
+Let us consider this line of code. The function name is *randn*. Then, inside the parentheses we provide our input arguments. We are providing the function with two input arguments, with each input separated by a comma. In this case, the function will return a matrix with 25 rows and one column. By using the = sign, we are assigning that output to the variable named data. 
 
 !!! tip
 	Don't forget that if you need more information about what a function does or what input it needs, always try:
