@@ -1,8 +1,9 @@
 site_name: danalyzer documentation
 site_author: 'Dan Denis'
 docs_dir: docs/
-repo_name: 'ddenis73/danalyzer-docus'
+repo_name: 'ddenis73/danalyzer-docs'
 repo_url: 'https://github.com/ddenis73/danalyzer-docs'
+site_url: 'https://github.com/ddenis73/danalyzer-docs/gh-pages'
 
 pages:
   - Home: 'index.md'
