@@ -128,8 +128,144 @@ When writing data analysis scripts, if statements and for loops are going to be 
 
 Although if statements and for loops will be the control statements you use the most, some knowledge of the other three control statements available in MATLAB is valuable, and will be useful in certain situations.
 
+## While statements 
+
+While loops are similar to for loops, and usually either can be used to accomplish the same task. The main differences is that in a for-loop you specify how many iterations to run through. A while loop will keep going until you tell it to stop
+
+```matlab
+
+i = 0
+
+while true
+	i = i + 1;
+	disp(['Give me ' num2str(i) 'X more MATLAB!'])
+end
+```
+
+This while loop will go on forever, because we have not told it when to stop. 
+
+!!!tip
+	If you have just ran this code, how would you get this process to stop? Pressing CTRL + C while focused on the Command Window will break the current operation and return control tou you.
+
+Because of this behavior, whenever we write a while loop we are going to need to specify a conditon under which the loop will end. We can achieve this with a "logical toggle" and include an if statement inside our while loop:
+
+```matlab
+
+% Generate a random number
+
+r = 50 * rand * 50;
+
+% Set the logical toggle to true
+
+toggle = true
+
+while toggle
+
+	% While toggle = true
+
+	r = r / 1.1;
+
+	% Condition in which to end loop
+
+	if r < 1
+		toggle = false;
+	end
+
+	disp(['Current value is ' num2str(r)])
+
+end
+```
+
+In this code we are first generating a number number. We when set the initial state of the toggle to be true. Inside the while loop, the code will keep evaluating until r < 1, which then switches the toggle to false, and thus ends the while loop.
+
+In general for loops and while loops can be used to achieve the same thing. The main factor when considering which one to use is whether you know how many iterations you want. If you do (for example, you know how many participants are in your data), a for loop is preferred. If the number of iterations are not known, you will need to use a while loop.
+
+### Avoid loops whenever possible
+
+As a brief aside, when you are coding you should always be looking for ways to avoid using for/while loops. For one, they are more confusing to read and increase the risk of errors entering the analysis. Second, loops will take longer than a vectorized alternative:
+
+```matlab
+
+p = zeros(1, 1000000); % Initialize a 1 x 1 million array
+
+% Loop approach
+
+tic
+
+for i = 1:length(p)
+
+	p(i) = i ^ 3;
+
+end
+
+toc
+
+% Vectorized approach
+
+tic
+
+p3 = 1(1:1000000) . ^ 3;
+
+toc
+
+```
+
+The tic and toc commands time how long it takes to evaulate the code between tic and toc. See how when we run the for-loop it takes around 100ms to evaluate. When we perform the same calculation without a for loop, it only takes around 10ms. As such the for loop took 10 times as long to evaluate as the vectorized statement! Although 10 vs 100ms doesn't seem like much, these timing differences really add up over a long analysis with processes that might take seconds or minutes to complete.
+
+Like many things, for loops play a very important part of MATLAB programming and you will definitely need to use them in your analysis. This example just illustrates that they can be misued, and you should be mindful of that when programming.
+
 ## Try-catch statements
 
-## While statements
+This control statement can be translated as: try this, and if that doesn't work, do this instead. In a try-catch statement, MATLAB tries to run the code between *try* and *catch*. If it works, all code between catch and end is ignored. If it doesn't work however, MATLAB will note the error and instead try to run the code between *catch* and *end*:
+
+```matlab
+
+% Create a variable with two elements
+
+e = [1 4];
+
+try
+
+	% This will cause an error
+	if e(3) > 3
+		disp('e(3) is bigger than 3')
+	end
+
+catch me
+
+	if e(2) > 3
+		disp('e(2) is gibber than 3')
+	end
+
+end
+
+```
+
+!!!question
+	By now you should be able to figure out why the try catch part of the statement will cause an error. If not, here is a hint: Inspect the size of e, and then recall what we learned about indexing.
+
+In this code, the if statement between try and catch will cause an error, and so instead the catch end statement is evaulated instead. MATLAB will be helpful here, and put information about the error in variable *me* (this variable can be called anything you like, but me is common shorthand for Matlab Exception). As such, debugging difficult errors is the primary use of try-catch statements. 
+
+A word of warning though. Do not use try catch statements as a way to write error-free code. Although errors are a huge source of frustration, they are helpful i ntelling you something is wrong! Placing error-ridden code inside a try-catch will not produce any errors, but your analysis will still be wrong.
 
 ## Switch-case statements
+
+This is the final in-built control statement, and I have yet to find a unique use for it. A switch-case statement provides something very similar to an if statement. *switch* holds the conditional statement 'in mind' and then tests whether that statement matches the various *case*s. *otherwise* works the same as an else statement:
+
+```matlab
+
+sleepStage = 'n2';
+
+switch sleepstage
+	case 'n2'
+		disp('N2 sleep')
+	case 'n3'
+		disp('N3 sleep')
+	otherwise
+		disp('REM sleep')
+end
+```
+
+!!!question
+	How would you perform this switch-case statement as an if-else statement? Hint, use the help function to look up *strcmp*
+
