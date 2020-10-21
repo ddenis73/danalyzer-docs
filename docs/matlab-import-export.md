@@ -74,17 +74,22 @@ Things are rarely this easy though. If each row contains a different number of c
 
 ```matlab
 
-fid = fopen('hard_text_file.txt')
+fid = fopen([subList(sub_i).folder filesep subList(sub_i).name]);
 d = [];
-row = 1;
+tline = fgetl(fid);
+i = 1;
 
-while ~feof(fid)
-	aline = fgetl(fid);
-	aline = regexp(aline, '\t'm 'split');
-	d(row, :) = cellfun(@str2double, aline);
-	row = row + 1;
-end
-
+	while ischar(tline)
+		d = strsplit(tline, {'\t' ' '});
+        	
+        	if length(d) < 12
+            	d(length(d)+1:12) = {' '};
+        	end
+        	
+        data(i,:) = d;
+        tline = fgetl(fid);
+        i = i+1;
+    end
+    
 fclose(fid);
-
 ```
