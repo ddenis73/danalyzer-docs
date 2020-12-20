@@ -1,12 +1,15 @@
 # danalyzer
 
-This site provides documentation and tutorials on performing analyses of sleep polysomnography (PSG) data in MATLAB using "the danalyzer"
+This site provides documentaion and tutorals on analyzing polysomnography (PSG) data in MATLAB using "the danalyzer".
 
-## What is the danalyzer
+## What is the danalyzer?
 
-danalyzer is a set of MATLAB tools for visualization and analysis of sleep signals. There are two core components to the toolbox. The GUI (danalyzer-gui) for visual data inspection, sleep scoring, and manual artifact rejection. Second, there are a set of tools (danalyzer-tools) to perform common electrophysiological analyses including power spectral density, sleep spindle and slow oscillation detection, and slow oscillation-spindle coupling. As of **October 2020** the the GUI is privately. The plan is to make a public release in the future. For now, SAMLAB members can download everything from the [lab code wiki](https://osf.io/jcaq7/). Outside users should contact Dan to obtain the code. danalyzer-tools will be made available on the SAMLAB code wiki shortly.
+
+Danalyzer is a toolbox for MATLAB for visualizing and analyzing sleep signals. The toolbox contains a graphical user interface (GUI) and a set of functions for performing common electrophysiological analyses including power spectral density, automated sleep spindle and slow oscillation detection, and slow oscillation-spindle coupling. As of **December 2020** the toolbox is available privately, with a public release planned in the early part of 2021. For now, SAMLAB members can download everything from the [lab code wiki](https://osf.io/jcaq7/). Outside users should contact Dan directly to obtain the code.
 
 ## Getting started
+
+After downloading sleepDanalyzer, the best place to start is the tutorials. 
 
 After downloading danalyzer, the best place to start is the tutorials. Work through these to familiarize yourself with how to use the toolbox. There are separate tutorials for [using MATLAB](matlab-tutorial.md),using [danalyzer-gui](gui-tutorial.md) and [danalyzer-tools](tools-tutorial.md). To use danalyzer you will need to install MATLAB. ND members can download MATLAB for free through Software Downloads on Inside ND. 
 
