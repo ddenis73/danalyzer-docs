@@ -69,27 +69,3 @@ The *load* and *readtable* commands work great with clean, easy to import data. 
 load('easy_text_file.txt')
 
 ```
-
-Things are rarely this easy though. If each row contains a different number of columns, or if there is a mixture of numbers and strings, you are going to quickly run into problems. In these kinds of situations, you are going to need to use the *fread* set of functions. This will give you maximum control of your data import, although can have a bit of a steep learning curve. As a first step, open *hard_text_file.txt* to get a sense of what we are dealing with. There are several ways of importing this data, but the easiest thing to do is read it in line-by-line. Below is the code to achieve this:
-
-```matlab
-
-fid = fopen('hard_text_file.txt');
-d = [];
-tline = fgetl(fid);
-i = 1;
-
-	while ischar(tline)
-		d = strsplit(tline, {'\t' ' '});
-        	
-        	if length(d) < 12
-            	d(length(d)+1:12) = {' '};
-        	end
-
-        data(i,:) = d;
-        tline = fgetl(fid);
-        i = i+1;
-    end
-    
-fclose(fid);
-```
