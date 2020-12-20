@@ -74,7 +74,7 @@ Things are rarely this easy though. If each row contains a different number of c
 
 ```matlab
 
-fid = fopen([subList(sub_i).folder filesep subList(sub_i).name]);
+fid = fopen('hard_text_file.txt');
 d = [];
 tline = fgetl(fid);
 i = 1;
@@ -85,7 +85,7 @@ i = 1;
         	if length(d) < 12
             	d(length(d)+1:12) = {' '};
         	end
-        	
+
         data(i,:) = d;
         tline = fgetl(fid);
         i = i+1;
