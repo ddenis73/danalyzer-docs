@@ -18,6 +18,8 @@ pages:
       - Importing/exporting: 'matlab-import-export.md'
       - Plotting: 'matlab-plotting.md'
     - GUI: 'gui-tutorial.md'
+      - Loading data: 'gui-load-data.md'
+      - Montages: 'gui-montage.md'
     - Tools: 'tools-tutorial.md'
   - Vignettes: 'vignettes.md'
   - Reference: 'reference.md'
