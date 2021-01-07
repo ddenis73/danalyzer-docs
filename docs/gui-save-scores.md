@@ -1,0 +1,5 @@
+# Saving sleep scores
+
+When you have finished scoring a record, you will want to save the sleep scores. To save data, navigate to File → Save data to bring up the Save dialogue. As with loading data, sleepDanalyzer can also save many different kinds of data. To save sleep scores, type the directory or click the push button next to “Save sleep scores” (second row). If you use the push button, this will let you select a destination and name for the sleep scores. Navigate to the folder you wish to save and give the file a name, and then click save (**NOTE: YOUR DATA HAVE NOT SAVED YET**). Then, in sleepDanalyzer, click the green Save button to actually save your data. To verify that the scores have been saved, check that a .mat file has indeed appeared in the folder you specified. There is nothing worse than not correctly saving your data after spending all that time sleep scoring!
+
+You should now be at a point where you can load in a dataset, apply a basic montage, and be comfortable with using the sleepDanalyzer to sleep score. 

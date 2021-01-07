@@ -16,14 +16,13 @@ pages:
       - Functions: 'matlab-functions.md'
       - Control statements: 'matlab-control-statements.md'
       - Importing/exporting: 'matlab-import-export.md'
-      - Plotting: 'matlab-plotting.md'
     - GUI: 
       - Overview: 'gui-tutorial.md'
       - Loading data: 'gui-load-data.md'
       - Montages: 'gui-montage.md'
-    - Tools: 'tools-tutorial.md'
-  - Vignettes: 'vignettes.md'
-  - Reference: 'reference.md'
+      - Data browsing and sleep scoring: 'gui-sleep-scoring.md'
+      - Saving sleep scores: 'gui-save-scores.md'
+      - File format information: 'gui-file-formats.md'
 
 theme:
   name: material
