@@ -7,22 +7,24 @@ site_url: 'https://github.com/ddenis73/danalyzer-docs/'
 
 pages:
   - Home: 'index.md'
-  - Tutorials:
-    - MATLAB: 
-      - Overview: 'matlab-tutorial.md'
-      - MATLAB environment: 'matlab-environment.md'
-      - Variables: 'matlab-variables.md'
-      - Indexing: 'matlab-indexing.md'
-      - Functions: 'matlab-functions.md'
-      - Control statements: 'matlab-control-statements.md'
-      - Importing/exporting: 'matlab-import-export.md'
-    - GUI: 
-      - Overview: 'gui-tutorial.md'
+  - Quickstart: 'gui-tutorial.md'
+  - Reference:
+    - GUI:
       - Loading data: 'gui-load-data.md'
-      - Montages: 'gui-montage.md'
-      - Data browsing and sleep scoring: 'gui-sleep-scoring.md'
-      - Saving sleep scores: 'gui-save-scores.md'
+      - Data browsing: 'gui-data-browser.md'
+      - Sleep scoring: 'gui-sleep-scoring.md'
+      - Sleep statistics: 'gui-sleep-statistics.md'
+      - Sleep scorer reliability: 'gui-reliability.md'
+      - Artifact rejection: 'gui-artifact-rejection.md'
+      - Marking segments: 'gui-segment-marker.md'
+      - Custom notations: 'gui-event-marker.md'
+      - Channel properties: 'gui-channel-properties.md'
+      - Subsetting data: 'gui-subset-data.md'
+      - Saving data: 'gui-save-data.md'
+      - Montage creation: 'gui-montage.md'
       - File format information: 'gui-file-formats.md'
+      - Import/export different file types: 'gui-import-export.md'
+      - Calling danalyzer from command window: 'gui-command-window.md'
 
 theme:
   name: material
