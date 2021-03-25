@@ -1,0 +1,775 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Dan Denis">
+      
+      
+        <link rel="canonical" href="https://github.com/ddenis73/danalyzer-docs/gui-tutorial/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>Quickstart - danalyzer documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-purple">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#danalyzer-gui-quickstart" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="danalyzer documentation" class="md-header__button md-logo" aria-label="danalyzer documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            danalyzer documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quickstart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ddenis73/danalyzer-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ddenis73/danalyzer-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="danalyzer documentation" class="md-nav__button md-logo" aria-label="danalyzer documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    danalyzer documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ddenis73/danalyzer-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ddenis73/danalyzer-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quickstart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Quickstart
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-danalyzer" class="md-nav__link">
+    Open danalyzer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-data" class="md-nav__link">
+    Load data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-a-montage" class="md-nav__link">
+    Apply a montage
+  </a>
+  
+    <nav class="md-nav" aria-label="Apply a montage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-montage" class="md-nav__link">
+    Editing a montage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-browsing-and-sleep-scoring" class="md-nav__link">
+    Data browsing and sleep scoring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-sleep-scores" class="md-nav__link">
+    Saving sleep scores
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        GUI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GUI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          GUI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-load-data/" class="md-nav__link">
+        Loading data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-data-browser/" class="md-nav__link">
+        Data browsing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-sleep-scoring/" class="md-nav__link">
+        Sleep scoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-sleep-statistics/" class="md-nav__link">
+        Sleep statistics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-reliability/" class="md-nav__link">
+        Sleep scorer reliability
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-artifact-rejection.md" class="md-nav__link">
+        Artifact rejection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-segment-marker.md" class="md-nav__link">
+        Marking segments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-event-marker.md" class="md-nav__link">
+        Custom notations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-channel-properties.md" class="md-nav__link">
+        Channel properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-subset-data.md" class="md-nav__link">
+        Subsetting data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-save-data.md" class="md-nav__link">
+        Saving data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-montage/" class="md-nav__link">
+        Montage creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-file-formats/" class="md-nav__link">
+        File format information
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-import-export.md" class="md-nav__link">
+        Import/export different file types
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-command-window.md" class="md-nav__link">
+        Calling danalyzer from command window
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-danalyzer" class="md-nav__link">
+    Open danalyzer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-data" class="md-nav__link">
+    Load data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apply-a-montage" class="md-nav__link">
+    Apply a montage
+  </a>
+  
+    <nav class="md-nav" aria-label="Apply a montage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-montage" class="md-nav__link">
+    Editing a montage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-browsing-and-sleep-scoring" class="md-nav__link">
+    Data browsing and sleep scoring
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-sleep-scores" class="md-nav__link">
+    Saving sleep scores
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ddenis73/danalyzer-docs/edit/master/docs/gui-tutorial.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="danalyzer-gui-quickstart">danalyzer GUI quickstart</h1>
+<p>This brief tutorial will show you how to quickly start scoring data. This assumes you have a file ready to be sleep scored.</p>
+<h2 id="open-danalyzer">Open danalyzer</h2>
+<p>With sleepDanalyzer downloaded and added to the MATLAB path, start the GUI by typing:</p>
+<pre><code class="language-matlab">sleepDanalyzer
+</code></pre>
+<p>into the MATLAB command window. This will print some text to the command window. If everything has been installed correctly, you should see something like this:</p>
+<pre><code class="language-matlab">Starting sleepDanalyzer version: 0.9.0
+
+NOTE: This is a beta version of sleepDanalyzer!!!
+Features still in development
+
+Welcome to sleepDanalyzer!
+</code></pre>
+<p>The GUI relies on a number of EEGLAB functions to help import data of different types. If sleepDanalyzer cannot find these import functions, you will get a warning e.g.:</p>
+<pre><code class="language-matlab">Warning: BIOSIG extension for EEGLAB not found. Will not be able to import .edf files
+</code></pre>
+<p>If you get a warning like this, check your EEGLAB installation and ensure that 1) EEGLAB is on the MATLAB path, and 2) the relevant EEGlAB extensions are installed (BIOSIG extension required for .edf files, and BVA-IO extension required for BrainVision files).</p>
+<p>If all has gone well, a blank GUI will have opened.</p>
+<p><img alt="danalyzer_blank" src="../img/danalyzer_empty.png" /></p>
+<h2 id="load-data">Load data</h2>
+<p>To load data into danalyzer, navigate to File --&gt; Load data or press CTRL + O (CMD + O on a Mac). In the window that opens, we are going to <strong>Load dataset</strong>. Either type the directory or use the push butons to navigate to the file that you wish to load. After selecting the file, click OK to read in the data (this may take a while depending on the size of the data file). When the data is loaded, a new window will appear. Carefully review this window <em>before</em> you start scoring. The recording start time is pulled from the dataset. If you have them, enter the lights off and on time. All times should be entered in the format: hh:mm:ss.sss. <em>If lights off/on times are not specified, danalyzer will assume that lights off was at the start of recording, and lights on was at the end of the recording</em>. Keep the epoch length field at the default 30 seconds.</p>
+<p>When everything is entered correctly, click Confirm to pull the data into the GUI. If everything went well, your data will appear something like this:</p>
+<p><img alt="danalyzer_full" src="../img/danalyzer_full.png" /></p>
+<h2 id="apply-a-montage">Apply a montage</h2>
+<p>You will likely want to change some details about how the data look for the purposes of sleep scoring (for example, adding a scale line). All of these alterations are controlled though a montage file, a MATLAB script that controls how the data are presented. To select a montage, click on the montage list and select which montage you want to use.</p>
+<p>When a particular montage is selected, the display will update accordingly:</p>
+<p><img alt="danalyzer_montage" src="../img/danalyzer_montage_applied.png" />
+<em>In this example, applying the montage added scale lines around channel F3. It also re-colored EOG and EMG channels blue and red respectively.</em></p>
+<h3 id="editing-a-montage">Editing a montage</h3>
+<p>You can edit the motnage on-the-fly by navigating to Montage --&gt; Edit montage (or by pressing the m key), which brings up a dialog window. You can specify any of the following changes:</p>
+<ul>
+<li><strong>Scale</strong>: Integer specifying a new scale for all channels</li>
+<li><strong>Scale channel</strong>: The channel that you wish the scale lines to be displayed around. Leaving this blank will remove the scale lines entirely</li>
+<li><strong>Scale values</strong>: A value indicating where to place each scale line</li>
+<li><strong>Scale color</strong>: A MATLAB RGB triplety indicating the color of the scale lines</li>
+<li><strong>Hide channels</strong>: A list of channels you want to hide (i.e. remove from the display)</li>
+<li><strong>Channel order</strong>: The order in which the channels are displayed. If you specify channels to hide, ensure that they are not listed in the channel order</li>
+<li><strong>EEG color</strong>: The color of all EEG channels</li>
+<li><strong>EOG color</strong>: The color of all EOG channels</li>
+<li><strong>EMG color</strong>: The color of all EMG channels</li>
+<li><strong>ECG color</strong>: The color of all ECG channels</li>
+<li><strong>Other color</strong>: The color of all other channels</li>
+</ul>
+<p>Click OK to adopt these new settings. You can always revert back to a predefined montage by selecting it from the montage list. You can also clear the montage entirely by navigating to Montage --&gt; Clear montage.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Rather than making on-the-fly changes each time, the best approach is to create a new montage file and add it to the list of available montages. See the Montage creation guide for full details.</p>
+</div>
+<p>When you are happy with your montage settings, we can begin browsing the data and start sleep scoring!</p>
+<h2 id="data-browsing-and-sleep-scoring">Data browsing and sleep scoring</h2>
+<p><strong>Before you can interact with the GUI, you must click in an empty gray area of the GUI</strong>.</p>
+<p>Navigate between epochs by pressing the left or right arrow key. You can jump forwards or backwards in chunks of 10 epochs by clicking the &gt;&gt; or &lt;&lt; buttons. The current epoch number is displayed in the bottom left. You can type any epoch number into this box to immediately jump to it. You can also move to a specific epoch by clicking on the corresponding space in the hypnogram window at the top of the GUI.</p>
+<p>The current scale of the data is indicated in the box next to the montage list (default is 150). The scale can be adjusted by typing a new scale value into the box, or using the +/- buttons to increase or decrease the scale in chunks of 25.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Scale units in danalyzer are essentially aribtary. danalyzer assumes the data are stored in microvolts, but this may not always be the case. If your data are all flat lines, one reason could be that the data are not microvolts.</p>
+</div>
+<p>Sleep scoring is incredibly straightforward. Score an epoch simply by pressing the corresponding button on the keyboard:</p>
+<p>0 = Wake 1 = N1 2 = N2 3 = N3 4 = N4 5 = REM 6 = Movement</p>
+<p>After scoring an epoch, the display will automatically advance. If you wish to unstage an epoch, press the period (.) key. As you score, you will see that the hypnogram also starts to be created. If you want to make any notes about the record that you are scoring, press the n key to bring up the Notes window. Here you can record any details about the record, and these notes will be saved alongside the score file.</p>
+<h2 id="saving-sleep-scores">Saving sleep scores</h2>
+<p>When you have finished scoring a record, you will want to save the sleep scores. To save data, navigate to File --&gt; Savd data or press CTRL/CMD + S to bring up the Save dialogue. As with loading data, danalyzer can also save many different kinds of data. </p>
+<p>To save sleep scores, type the directory or click the push button next to "Save sleep scores" (second row). If you use the push button, this will let you select a destination and name for the sleep scores. Navigate to the folder you wish to save to, and give the file a name. Then click save <strong>NOTE: YOUR DATA HAVE NOT SAVED YET</strong>. Then, in danalyzer, click the freen Save button to actually save your data. </p>
+<p>To verify that the scores have been saved, check that a .mat file has indeed appeared in the folder that you specified. There is nothing worse than not correctly saving your data after spending all that time sleep scoring!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Full documentation about the format of danalyzer files can be found here. If you need to import/export to other types of file, see here.</p>
+</div>
+<p>You should now be at a point where you know how to load a dataset, apply a montage, and be comfortable with using danalyzer to sleep score. To learn more about the full functionality, see the relevant pages in the Reference tab on the sidebar. Happy sleep scoring!</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../gui-load-data/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Loading data
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,907 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Dan Denis">
+      
+      
+        <link rel="canonical" href="https://github.com/ddenis73/danalyzer-docs/matlab-variables/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>Variables - danalyzer documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-purple">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="danalyzer documentation" class="md-header__button md-logo" aria-label="danalyzer documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            danalyzer documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ddenis73/danalyzer-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ddenis73/danalyzer-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="danalyzer documentation" class="md-nav__button md-logo" aria-label="danalyzer documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    danalyzer documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ddenis73/danalyzer-docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ddenis73/danalyzer-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-tutorial/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        GUI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GUI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          GUI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-load-data/" class="md-nav__link">
+        Loading data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-data-browser/" class="md-nav__link">
+        Data browsing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-sleep-scoring/" class="md-nav__link">
+        Sleep scoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-sleep-statistics/" class="md-nav__link">
+        Sleep statistics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-reliability/" class="md-nav__link">
+        Sleep scorer reliability
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-artifact-rejection.md" class="md-nav__link">
+        Artifact rejection
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-segment-marker.md" class="md-nav__link">
+        Marking segments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-event-marker.md" class="md-nav__link">
+        Custom notations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-channel-properties.md" class="md-nav__link">
+        Channel properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-subset-data.md" class="md-nav__link">
+        Subsetting data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-save-data.md" class="md-nav__link">
+        Saving data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-montage/" class="md-nav__link">
+        Montage creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-file-formats/" class="md-nav__link">
+        File format information
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-import-export.md" class="md-nav__link">
+        Import/export different file types
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gui-command-window.md" class="md-nav__link">
+        Calling danalyzer from command window
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-naming" class="md-nav__link">
+    Variable naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-variables" class="md-nav__link">
+    Types of variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-variables" class="md-nav__link">
+    Numeric variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-variables" class="md-nav__link">
+    Logical variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-and-string-variables" class="md-nav__link">
+    Character and string variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-variables" class="md-nav__link">
+    Cell variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structures" class="md-nav__link">
+    Structures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ddenis73/danalyzer-docs/edit/master/docs/matlab-variables.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="variables">Variables</h1>
+<p>Variables are how we can store pieces of information in MATLAB. Creating a variable in MATLAB is straightforward. You simply give your variable a name, and <em>assign</em> a value to that variable using the <em>=</em> symbol:</p>
+<pre><code class="language-matlab">myFirstVar = 7
+</code></pre>
+<p>If you type that line into the command window, MATLAB will confirm what you just wrote. Whenever you evaluate some code in MATLAB, it will confirm by printing the result to the command window. This can get annoying after a while, and is often unncessary. You tell MATLAB to shut it by placing a semi colon at the end of the line:</p>
+<pre><code class="language-matlab">myFirstVar = 7;
+</code></pre>
+<p>Now that you have created a variable, it appears in the Workspace. It tells you the name of the variable, as well as giving you some information about its content:</p>
+<p><img alt="workspace_example" src="../img/workspace_one_file.png" style="height:100px" /></p>
+<p>To get more information about a variable we can use the function <em>whos</em>:</p>
+<pre><code class="language-matlab">% Get information about a specific variable
+
+whos myFirstVar
+
+% Get information about all variables in the workspace
+
+whos
+</code></pre>
+<p>This tells us the name of the variable, as well as important information about the size and class of the variable. These bints of info will make more sense as we learn about different types of variable:</p>
+<pre><code>  Name            Size            Bytes  Class     Attributes
+
+  myFirstVar      1x1                 8  double  
+</code></pre>
+<p>You can reassign any value to an  existing variable in the exact same way you initially created the variable. To clear a variable from the workspace you can use the <em>clear</em> command. It is also possible to empty a variable, meaning that the variable itself will remain in the workspace but will not have any value assigned to it. Do this using the square brackets <em>[]</em>. We will learn why this is the case in the next section:</p>
+<pre><code class="language-matlab">
+% Reassign a new value to a variable
+
+myFirstVar = 9;
+
+% Empty a variable, but keep it in the workspace
+
+myFirstVar = [];
+
+% Clear the variable from the workspace
+
+clear myFirstVar
+
+</code></pre>
+<h2 id="variable-naming">Variable naming</h2>
+<p>There are several rules and guidelines when it comes to naming variables. Here are the key rules:</p>
+<ul>
+<li>Variable names cannot contain spaces. Use an underscore (<em>_</em>) instead</li>
+<li>Variable names cannot start with numbers.</li>
+<li>Variable names cannot contain non-alphanumeric characters except the <em>_</em></li>
+</ul>
+<p>As as well as these hard rules (MATLAB will throw an error), there are also useful guidelines to follow. Others have attempted to write entire "<a href="https://www.mathworks.com/matlabcentral/fileexchange/46056-matlab-style-guidelines-2-0">style guides</a>", but here are a few help suggestions:</p>
+<ul>
+<li>Don't use the same name as an existing function. If you do this, your variable will take precedence over the function which is very likely to lead to errors. For instance, if you name a variable <em>mean</em>, it will overwrite the MATLAB function <em>mean</em>. If you are unsure if a variable name might conflict with a function, you can use the <em>which</em> command to check.</li>
+<li>Use meaningful variables names, but try not to use variable names that are too long. Keeping variables short and meaningful leads to easier to read code.</li>
+<li>MATLAB is case-sensitive, so pay special attention to to capital letters. myVar, Myvar, and myvar would all be interpreted as different variables by MATLAB. </li>
+<li>Be consistent. Keep pluralization consistent throughout a script. When you have variables that are 2+ words, separate words consistently e.g. by using snake_case or camelCase.</li>
+</ul>
+<h2 id="types-of-variables">Types of variables</h2>
+<p>We are going to briefly go through the major variable tpyes you are likely to come across while using MATLAB. As you gain more experience it wil lstart to become clearer when to use each type of variable.</p>
+<h3 id="numeric-variables">Numeric variables</h3>
+<p>The most common variable type we will come across. In fact, myFirstVar was a numeric variable. Variables for numbers can contains single numbers (called scalars) or multiple numbers. A one-dimensional matrix of numbers is called an array, and can be created using square brackets <em>[]</em>:</p>
+<pre><code class="language-matlab">
+anArray = [2 6 8 3]; 
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>As well as using square brackets to create arrays/matrices, you can also use square brackets to joing existing variables together. This way of creating a variable is called <em>concatenation</em>:</p>
+<p><code>var1 = [1 2 3];
+var2 = [4 5 6];
+var3 = [var1 var2];</code></p>
+</div>
+<p>A two-dimensional matrix can be created by using the semi-colon to indicate where the next row begins:</p>
+<pre><code class="language-matlab">
+aMatrix = [2 6 8 3; 5 2 1 9];
+</code></pre>
+<p>What are the "dimensions" of this matrix. We can check by using <em>whos</em></p>
+<pre><code class="language-matlab">
+whos aMatrix
+
+</code></pre>
+<pre><code class="language-matlab">  Name         Size            Bytes  Class     Attributes
+
+  aMatrix      2x4                64  double              
+
+</code></pre>
+<p>The size output tells us this a 2x4 matrix. What this tells us is that the first dimension has a size of two, and the second dimension has a size of four. Whenever referring to dimensions of a MATLAB variable, the first dimensions is <em>always</em> referring to rows, and the second dimension columns. As such, we can determine that this matrix has two rows and four columns. While this seems obvious given that we assigned it ourselves, when you are working with much larger datasets you will need ways to quickly figure out a variables dimensions.</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>The size of a variable can be found using the <em>size</em> command:</p>
+<p><code>size(aMatrix)</code></p>
+<p>When you run this code, what does the output mean?</p>
+</div>
+<p>An important rule of matrices is that they have to be rectangular. Each row of a matrix must have the same number of elements. The error message <em>Dimensions of arrays being concatenated are not consistenet</em> will be displayed whenever you try to create a variable with differing number of elements.</p>
+<p>Once you have created some variables, you can use them in mathematical expressions. Most mathematical operations in MATLAB have fairly intuiatve keys:</p>
+<pre><code class="language-matlab">
+% Create some variables
+
+var1 = 6;
+var2 = 8;
+
+% Perform some mathematical operations
+
+addVar = var1 + var2;
+subVar = var1 - var2;
+mulVar = var1 * var2;
+divVar = var1 / var2;
+powVar = var1 ^ 2;
+
+</code></pre>
+<p>You can perform the same operations on arrays and matrics in an element-wise fashion. This means that if you were to add two arrays together, the first element in array 1 would be added to the first element in array 2, and so on. Matrix algebra is an extensive subject in its own right, and you get a primer with MATLAB examples <a href="https://www.mathworks.com/help/finance/matrix-algebra-refresher.html">here</a>:</p>
+<pre><code class="language-matlab">
+% Create some arrays
+
+arr1 = [1 2 4];
+arr2 = [2 4 6];
+
+% Perform some mathematical operations
+
+addArr = arr1 + arr2;
+subArr = arr1 - arr2;
+mulArr = arr1 .* arr2;
+rDivArr = arr1 ./ arr2; % Right array division (divide first array into second)
+lDivArr = arr1 .\ arr2; % Left array division (divide second array into first)
+
+</code></pre>
+<h3 id="logical-variables">Logical variables</h3>
+<p>Also called Booleans. These are a sepcial type of variable that can assume either the state <em>true</em> (1) or <em>false</em> (0). We can create a logical variable by using a logical operator. The <em>==</em> sign is just one such case, and evalues whether two elements are equal to each other:</p>
+<pre><code class="language-matlab">
+% Does 1 = 1?
+
+aLogical = 1 == 1;
+
+% Does 1 not equal 1?
+
+aLogical = 1 ~= 1;
+
+% Is 1 greater than 2?
+
+aLogical = 1 &gt; 2;
+
+% Is 1 less than 2?
+
+aLogical = 1 &lt; 2;
+
+</code></pre>
+<p>Hopefully you can figure out which cases the logical value will be true, and which cases the value will be false. You can also create logical variables with the <em>true</em> and <em>false</em> commands:</p>
+<pre><code class="language-matlab">
+% true
+
+trueLogical = true;
+
+% false
+
+falseLogical = false;
+
+</code></pre>
+<p>A very common usage for logical variables is in <em>if</em> statements, which we will get to in a later section. Although logical variables have their own Class in MATLAB, they can also be treated as numeric variables in operations:</p>
+<pre><code class="language-matlab">
+aNumeric = 7;
+aLogical = true;
+
+aNumeric + aLogical
+
+</code></pre>
+<pre><code class="language-matlab">
+ans =
+
+     8
+
+</code></pre>
+<h3 id="character-and-string-variables">Character and string variables</h3>
+<p>Characters can be stored as variables using single quotes:</p>
+<pre><code class="language-matlab">
+% A character array
+
+aChar = 'matlab rules';
+
+</code></pre>
+<p>Unlike a variable name, spaces and non-alphanumeric characters are fine here. MATLAB stores characters according to their ASCII code. As such, adding together a numeric and character will give you unexpected results:</p>
+<pre><code class="language-matlab">
+num7  = 7;
+char7 = '7';
+
+num7 + char7
+
+</code></pre>
+<pre><code class="language-matlab">
+ans =
+
+    62
+
+</code></pre>
+<p>Clearly this is not the answer. Rather than adding 7 to 7, MATLAB is instead adding 55 to 7. This is because the ASCII code for the character '7' is 55. Use the str2num function to automatically convert a character to a number:</p>
+<pre><code class="language-matlab">
+num7 + str2num('7')
+
+</code></pre>
+<pre><code class="language-matlab">
+ans =
+
+    14
+
+</code></pre>
+<p>More recent versions of MATLAB have introduced a different class of variable, called a string. Functionally, a string array serves a similar purpose to a character array, except they are created using double quotation marks rather than single quotations:</p>
+<pre><code class="language-matlab">
+% A character array
+
+aChar = 'matlab rules';
+
+% A string array
+
+aString = &quot;matlab rules&quot;;
+
+</code></pre>
+<p>The distinction between a character and a string variable is quite subtle. Let's inspect both variables using <em>whos</em>:</p>
+<pre><code class="language-matlab">
+whos aChar aString
+
+</code></pre>
+<pre><code class="language-matlab">  Name         Size            Bytes  Class     Attributes
+
+  aChar        1x12               24  char                
+  aString      1x1               166  string              
+
+</code></pre>
+<p>This tells us that the character array contains 12 elements, whereas the string array contains just a single element. This illustrates the fundamental difference between a character and string array. In a character array, each letter is an individual element that can be indexed (more on that next). A string array on the other hand contains all of the text inside a single element. In practice, for sleep EEG analysis we will not work too much with these kinds of arrays. However it is important to keep in mind the difference of single and double quotations when creating text-based variables.</p>
+<h3 id="cell-variables">Cell variables</h3>
+<p>A cell variable allows us to store elements of different types, and can also be useful in storing data of different sizes. We have already seen what happens if we try and create a matrix of different size rows. We also run into problems when we try to store numeric and character variables:</p>
+<pre><code class="language-matlab">
+[6 'number' 8]
+
+</code></pre>
+<pre><code class="language-matlab">ans =
+
+    'number'
+</code></pre>
+<p>To deal with this, we use a cell array. You can think of a call array as containing a series of separate cages containing different pieces of information. A cell array can be created using curlu brackets <em>{}</em>:</p>
+<pre><code class="language-matlab">
+% Create a cell array
+
+aCell = {6 'number' 6};
+
+</code></pre>
+<p>After creating a cell, you can access each element in the cell using indexing, which we will talk about in the next section.</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Cell arrays can also be multidimensional. Try creating a 3 X 5 cell array with a mixture of numbers and characters. Using <em>whos</em> or <em>sizes</em> to verify.</p>
+</div>
+<p>Cells can also contains data of different sizes. Remember, in a matrix we cannot have rows with differing numbers of elements. In such a situation, our solution is to place each row of data into a separate "cage" inside a cell array:</p>
+<pre><code class="language-matlab">
+% Won't work as a matrix
+
+a = [3 4 5; 5 7 3 1; 1 2];
+
+% Will work in a cell array
+
+c = {[3 4 5] [5 7 3 1] [1 2]};
+
+</code></pre>
+<pre><code class="language-matlab">c =
+
+  1×3 cell array
+
+    {1×3 double}    {1×4 double}    {1×2 double}
+
+</code></pre>
+<p>If we look at the contents of the cell we have just created, we can see our cell array has one cell for each of our differently-lengthed arrays. MATLAB does not throw an error here, because each array is self-contained in its own part of the cell.</p>
+<h3 id="structures">Structures</h3>
+<p>Structures are another useful way for storing lots of different types of data. They can be thought of as a small database. Each property of a structure is called a field and is defined using thr period key:</p>
+<pre><code class="language-matlab">
+% Create a structure
+
+aStruct.field1 = 3;
+aStruct.field2 = 'hello';
+
+</code></pre>
+<p>If you were to inspect the size of this varialbe, you will see it is a 1x1 variable. Although this might be confusing (afterall, we have created 2 fields). The reason for this is that although there are only two fields, there is only one instance of the variable <em>aStruct</em>. We can add a second entry to the variable:</p>
+<pre><code class="language-matlab">
+% Add a new entry to the structure
+
+aStruct(2).field1 = 8;
+aStruct(2).field2 = 'hello';
+
+</code></pre>
+<p>As we start working with real data, we are going to come across structures alot. When EEG data is loaded into MATLAB it is stored a structure. Similarily, output from most of the analysis functions (e.g. spindle detection) will be formatted as a structure. As such it is well worth spending some time familiarizing yourself how to access data in a structure. We will discuss ways to access data in a structure in the next section.</p>
+<h3 id="tables">Tables</h3>
+<p>Tables can be used to stroed data like a spreadsheet, with each column having a title. Like cells and structures, tables can store different data types. The <em>table</em> function creates a table:</p>
+<pre><code class="language-matlab">
+% Create a table
+
+aTable = table(&quot;ppt_01&quot;, 6.5, 30, 'VariableNames', {'subid', 'spindles', 'memory'});
+
+</code></pre>
+<p>Here we are first assigning values to each column in the table. This example, which is similar to how you might use a table in real data, is assigning three columns. Column 1 is a string indicating a participant id. Columns 2 and 3 will be numeric data, indicating this participant's spindle density and memory score. After assigning all the data we want, we then need to specify the names of each of our columns. We do this with the <em>input argument</em> 'VariableNames', followed by a cell array specifying our variable headers: </p>
+<pre><code class="language-matlab">
+aTable =
+
+  1×3 table
+
+     subid      spindles    memory
+    ________    ________    ______
+
+    &quot;ppt_01&quot;      6.5         30  
+
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+    
+  </body>
+</html>
