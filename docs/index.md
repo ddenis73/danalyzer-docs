@@ -6,7 +6,7 @@ This site provides documentation and tutorials on visualizing and analyzing poly
 
 danalyzer is a toolbox for MATLAB for visualizing and analyzing sleep signals. The toolbox is primarily a graphical user interface (GUI) for visualizing and scoring PSG data. The motivation for writing it was to replace obsolete propriatary sleep scoring software, and to allow a common program for viewing data, sleep scoring etc. across labs using different systems. It is publically released in case it is something other might find useful.
 
-After installing, follow the [Quickstart](/gui-tutorial.md) to get started. 
+After installing, follow the [Quickstart](/gui-tutorial/) to get started. 
 
 ## Installation
 
